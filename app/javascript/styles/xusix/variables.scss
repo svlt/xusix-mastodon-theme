@@ -44,8 +44,8 @@ $red-bookmark: $xusix-red-lighter;
 $error-value-color: $xusix-red-lighter !default;
 
 // Tell UI to use selected colors
-$ui-base-color: $xusix-base-color !default;                    // Darkest
-$ui-base-lighter-color: lighten($ui-base-color, 26%) !default; // Lighter darkest
+$ui-base-color: darken($xusix-base-color, 10%) !default;       // Darkest
+$ui-base-lighter-color: lighten($ui-base-color, 35%) !default; // Lighter darkest
 $ui-primary-color: $xusix-primary-color !default;              // Lighter
 $ui-secondary-color: $xusix-secondary-color !default;          // Lightest
 $ui-highlight-color: $xusix-highlight-color !default;
@@ -55,7 +55,7 @@ $ui-highlight-color: $xusix-highlight-color !default;
 // $darker-text-color: $ui-primary-color !default;
 // $dark-text-color: $ui-base-lighter-color !default;
 // $secondary-text-color: $ui-secondary-color !default;
-// $highlight-text-color: lighten($ui-highlight-color, 8%) !default;
-// $action-button-color: $ui-base-lighter-color !default;
-$passive-text-color: $xusix-red-lighter;
+$highlight-text-color: lighten($ui-highlight-color, 10%) !default;
+$action-button-color: $white !default;
+$passive-text-color: $xusix-red-lighter !default;
 // $active-passive-text-color: $success-green !default;
