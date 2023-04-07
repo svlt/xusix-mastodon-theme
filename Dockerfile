@@ -1,4 +1,4 @@
-FROM tootsuite/mastodon:v4.1.0
+FROM tootsuite/mastodon:v4.1.2
 
 # Add theme files
 COPY --chown=mastodon:mastodon app/javascript/styles/xusix/*.scss /opt/mastodon/app/javascript/styles/xusix/

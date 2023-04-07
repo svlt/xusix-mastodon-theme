@@ -30,12 +30,12 @@ button, .button, .block-button {
       color: $highlight-text-color;
     }
 
-    &:hover,
-    &:focus {
+    &:hover:not([disabled], .disabled),
+    &:focus:not([disabled], .disabled) {
       background: linear-gradient(#E04E4E, #CD0C0C 45%, #CA0303);
     }
 
-    &:active {
+    &:active:not([disabled], .disabled) {
       background: linear-gradient(#660709, #4F0507);
       box-shadow: 0 2px 2px #2C0304 inset;
     }
@@ -59,6 +59,7 @@ button, .button, .block-button {
 #mastodon,
 .public-layout {
   background: linear-gradient(hsl($active-hue 97% 25%), hsl($active-hue 30% 5%));
+  background-attachment: fixed;
 }
 
 .drawer__header {
