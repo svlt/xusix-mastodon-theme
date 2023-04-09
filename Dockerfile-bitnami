@@ -49,6 +49,9 @@ COPY app/javascript/styles/xusix.scss /opt/bitnami/mastodon/app/javascript/style
 # COPY config/themes.yml /opt/bitnami/mastodon/config/themes.yml
 RUN echo 'xusix: styles/xusix.scss' >> /opt/bitnami/mastodon/config/themes.yml
 
+# Limit SW cache to same-origin
+RUN sed -i 's/({ request }) => request.destination ===/({ request, sameOrigin }) => sameOrigin \&\& request.destination ===/g' /opt/bitnami/mastodon/app/javascript/mastodon/service_worker/entry.js
+
 RUN chmod g+rwX /opt/bitnami
 
 COPY bitnami/rootfs /
