@@ -1,8 +1,7 @@
 FROM tootsuite/mastodon:v4.1.2
 
 # Add theme files
-COPY --chown=mastodon:mastodon app/javascript/styles/xusix/*.scss /opt/mastodon/app/javascript/styles/xusix/
-COPY --chown=mastodon:mastodon app/javascript/styles/xusix.scss /opt/mastodon/app/javascript/styles/
+COPY --chown=mastodon:mastodon app/javascript/ /opt/mastodon/app/javascript/
 RUN echo 'xusix: styles/xusix.scss' >> /opt/mastodon/config/themes.yml
 
 # Recompile assets
