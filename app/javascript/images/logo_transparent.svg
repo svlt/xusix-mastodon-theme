@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<symbol viewBox="0 0 79 79" id="mastodon-svg-logo" stroke="currentColor" fill="none">
+<rect x="8.70813" y="33.6558" width="35.4328" height="52.4318" transform="rotate(-45 8.70813 33.6558)" stroke-width="9" />
+<rect x="8.61196" y="46.248" width="53.3769" height="34.7596" transform="rotate(-45 8.61196 46.248)" stroke-width="9" />
+<rect x="8.61196" y="46.248" width="53.3769" height="34.7596" transform="rotate(-45 8.61196 46.248)" stroke="#800F02" stroke-width="9"/>
+<path d="M11.6519 36.6399L18.3463 43.3342" stroke-width="9" />
+<path d="M61.1556 35.9845L67.8499 42.6789" stroke-width="9" />
+</symbol>
+</svg>

@@ -1,19 +1,14 @@
 <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_9_12)">
 <rect x="9.4842" y="28.2534" width="26.5437" height="39.2619" transform="rotate(-45 9.4842 28.2534)" stroke="#EEEEEE" stroke-width="6.7"/>
 <rect x="9.41224" y="37.6746" width="39.969" height="26.04" transform="rotate(-45 9.41224 37.6746)" stroke="#800F02" stroke-width="6.7"/>
 <rect x="9.41224" y="37.6746" width="39.969" height="26.04" transform="rotate(-45 9.41224 37.6746)" stroke="url(#paint0_linear_9_12)" stroke-width="6.7"/>
 <path d="M11.7104 30.486L16.719 35.4946" stroke="#EEEEEE" stroke-width="6.7"/>
 <path d="M48.748 29.9957L53.7566 35.0043" stroke="#EEEEEE" stroke-width="6.7"/>
-</g>
 <defs>
 <linearGradient id="paint0_linear_9_12" x1="8.11873" y1="34.4556" x2="47.2931" y2="74.231" gradientUnits="userSpaceOnUse">
 <stop stop-color="#B32017"/>
 <stop offset="0.5" stop-color="#620700"/>
 <stop offset="1" stop-color="#B32017"/>
 </linearGradient>
-<clipPath id="clip0_9_12">
-<rect width="65" height="65" fill="white"/>
-</clipPath>
 </defs>
 </svg>
