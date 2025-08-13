@@ -1,0 +1,3 @@
+[submodule "lscr-mastodon"]
+	path = lscr-mastodon
+	url = https://github.com/linuxserver/docker-mastodon.git
