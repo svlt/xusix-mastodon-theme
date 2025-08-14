@@ -1,3 +1,31 @@
-@import 'xusix/variables';
-@import 'application';
-@import 'xusix/diff';
+@use 'sass:color';
+@use 'xusix/variables' as *;
+@use 'mastodon/functions' as *;
+@use 'mastodon/variables' with (
+    $success-green: color.to-space(oklch(0.7729 0.1535 163.22), rgb),
+    $error-red: color.to-space(oklch(0.5232 0.1983 30.97), rgb),
+    $warning-red: color.to-space(oklch(0.6104 0.1924 29.91), rgb),
+    $gold-star: color.to-space(oklch(0.7686 0.1647 70.08), rgb),
+    $error-value-color: color.to-space($xusix-600, rgb),
+    $ui-base-color: color.to-space(darken($xusix-base-color, 10%), rgb),
+    $ui-primary-color: color.to-space($xusix-primary-color, rgb),
+    $ui-secondary-color: color.to-space($xusix-secondary-color, rgb),
+    $ui-highlight-color: color.to-space($xusix-highlight-color, rgb),
+    $ui-button-background-color: color.to-space($xusix-500, rgb),
+    $ui-button-focus-background-color: color.to-space($xusix-600, rgb),
+    $ui-button-focus-outline-color: color.to-space($xusix-400, rgb),
+    $ui-button-secondary-color: color.to-space($xusix-500, rgb),
+    $ui-button-secondary-border-color: color.to-space($xusix-500, rgb),
+    $ui-button-secondary-focus-border-color: color.to-space($xusix-300, rgb),
+    $ui-button-secondary-focus-color: color.to-space($xusix-300, rgb),
+    $ui-button-tertiary-color: color.to-space($xusix-300, rgb),
+    $ui-button-tertiary-border-color: color.to-space($xusix-300, rgb),
+    $ui-button-tertiary-focus-background-color: color.to-space($xusix-600, rgb),
+    $ui-button-destructive-background-color: color.to-space($xusix-500, rgb),
+    $ui-button-destructive-focus-background-color: color.to-space($xusix-600, rgb),
+    $ui-button-icon-hover-background-color: color.to-space(oklch(62.256% 0.2 30.96 / 0.4), rgb),
+    $action-button-color: #fff,
+    $passive-text-color: color.to-space($xusix-600, rgb),
+);
+@use 'application';
+@use 'xusix/diff';

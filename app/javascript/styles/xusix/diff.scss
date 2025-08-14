@@ -1,17 +1,17 @@
-// Notes!
-// Sass color functions, "darken" and "lighten" are automatically replaced.
+@use 'variables' as *;
+@use '../mastodon/variables' as *;
+
+// TODO: update hsl to use oklch
+$active-hue: 6;
+$active-sat: 65%;
 
 :root {
-  --xusix-red: $xusix-red;
-  --xusix-red-lighter: $xusix-red-lighter;
-  --active-hue: $active-hue;
-  --active-sat: $active-sat;
-  --fbc-blue-70: var(--xusix-red);
-  --fbc-blue-60: var(--xusix-red-lighter);
+  --xusix-red: $xusix-800;
+  --xusix-red-lighter: $xusix-600;
 }
 
 html {
-  scrollbar-color: $xusix-red rgba($ui-base-color, 0.25);
+  scrollbar-color: $xusix-800 rgba($ui-base-color, 0.25);
 }
 
 // Change the appearance of buttons
@@ -51,7 +51,7 @@ button, .button, .block-button {
   textarea {
     &:active,
     &:focus {
-      border-color: $xusix-red-lighter;
+      border-color: $xusix-600;
     }
   }
 }

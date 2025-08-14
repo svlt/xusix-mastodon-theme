@@ -48,7 +48,15 @@ RUN \
     tar xf \
     /tmp/mastodon.tar.gz -C \
     /app/www/ --strip-components=1 && \
-    rm -rf /tmp/*
+    rm -rf /tmp/* && \
+    cd /app/www && \
+    bundle config set --local deployment 'true' && \
+    bundle config set --local without 'development test exclude' && \
+    bundle config set silence_root_warning true && \
+    bundle install -j"$(nproc)" --no-cache && \
+    npm install -g corepack && \
+    corepack enable && \
+    yarn workspaces focus --production @mastodon/mastodon
 
 # Add theme files
 COPY --chown=1000:1000 app/javascript/ /app/www/app/javascript/
@@ -57,13 +65,6 @@ RUN echo 'xusix: styles/xusix.scss' >> /app/www/config/themes.yml
 
 RUN \
     cd /app/www && \
-    bundle config set --local deployment 'true' && \
-    bundle config set --local without 'development test exclude' && \
-    bundle config set silence_root_warning true && \
-    bundle install -j"$(nproc)" --no-cache && \
-    npm install -g corepack && \
-    corepack enable && \
-    yarn workspaces focus --production @mastodon/mastodon && \
     ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=precompile_placeholder \
     ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=precompile_placeholder \
     ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=precompile_placeholder \
@@ -71,9 +72,7 @@ RUN \
     SECRET_KEY_BASE=precompile_placeholder \
     bundle exec rails assets:precompile && \
     bundle exec bootsnap precompile --gemfile app/ lib/ && \
-    rm -rf /app/www/node_modules && \
-    cd streaming && \
-    yarn workspaces focus --production @mastodon/streaming
+    rm -rf /app/www/node_modules
 
 FROM lscr.io/linuxserver/mastodon:latest AS production
 

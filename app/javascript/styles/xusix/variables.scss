@@ -1,61 +1,30 @@
-// Commonly used web colors
-$black: #000000;
-$white: #ffffff;
-$success-green: #34d399;
-$error-red: #c21f0d;
-$warning-red: #df4635;
-$gold-star: #f59e0b;
+// This file should only define *new* variables, overrides to the upstream
+// Mastodon variables should be done in the xusix.scss file.
 
-// Classic Xusix colors
-$xusix-red: #800f02;
-$xusix-red-lighter: #a52315;
-$xusix-red-bright: #de1600;
+// Xusix variants
+$xusix-900: oklch(0.1906 0.0663 30.96);
+$xusix-800: oklch(0.3843 0.14743 30.96);
+$xusix-700: oklch(0.4302 0.18 30.96);
+$xusix-600: oklch(0.4761 0.18 30.96);
+$xusix-500: oklch(0.5928 0.18 30.96);
+$xusix-400: oklch(0.6306 0.16 30.96);
+$xusix-300: oklch(0.6802 0.13 30.96);
+$xusix-200: oklch(0.7953 0.10 30.96);
+$xusix-100: oklch(0.9504 0.03 30.96);
 
 // Classic Cubik Network colors
-$cubik-blue: #4d90fe; // #4b8df8
-$cubik-blue-lighter: #bfd5fa;
-$cubik-blue-darker: #0362fd;
-$cubik-red: #e02222;
-$cubik-yellow: #ffb848;
-$cubik-green: #35aa47;
-$cubik-purple: #852b99;
+$cubik-blue: oklch(0.6638 0.1772 260);
+$cubik-blue-lighter: oklch(0.8688 0.0568 260);
+$cubik-blue-darker: oklch(0.5545 0.2427 260);
+$cubik-red: oklch(0.5818 0.2212 27.67);
+$cubik-yellow: oklch(0.8301 0.1483 75.04);
+$cubik-green: oklch(0.6515 0.1731 145.74);
+$cubik-purple: oklch(0.4718 0.1816 319.7);
 $cubik-light-grey: #fafafa;
-$cubik-grey: #555555;
+$cubik-grey: #555;
 
 // Xusix Mastodon UI colors
 $xusix-base-color: #303030;
 $xusix-primary-color: #bababa;
 $xusix-secondary-color: #e6e6e6;
-$xusix-highlight-color: $xusix-red-bright;
-
-$active-hue: 6;
-$active-sat: 65%;
-$fbc-blue-70: $xusix-red;
-$fbc-blue-60: $xusix-red-lighter;
-
-$red-bookmark: $xusix-red-lighter;
-
-// Variables for defaults in UI
-// $base-shadow-color: $black !default;
-// $base-overlay-background: $black !default;
-// $base-border-color: $white !default;
-// $simple-background-color: $white !default;
-// $valid-value-color: $success-green !default;
-$error-value-color: $xusix-red-lighter !default;
-
-// Tell UI to use selected colors
-$ui-base-color: darken($xusix-base-color, 10%) !default;       // Darkest
-$ui-base-lighter-color: lighten($ui-base-color, 35%) !default; // Lighter darkest
-$ui-primary-color: $xusix-primary-color !default;              // Lighter
-$ui-secondary-color: $xusix-secondary-color !default;          // Lightest
-$ui-highlight-color: $xusix-highlight-color !default;
-
-// Variables for texts
-// $primary-text-color: $white !default;
-// $darker-text-color: $ui-primary-color !default;
-// $dark-text-color: $ui-base-lighter-color !default;
-// $secondary-text-color: $ui-secondary-color !default;
-$highlight-text-color: lighten($ui-highlight-color, 10%) !default;
-$action-button-color: $white !default;
-$passive-text-color: $xusix-red-lighter !default;
-// $active-passive-text-color: $success-green !default;
+$xusix-highlight-color: oklch(0.5711 0.22679 30.96);
