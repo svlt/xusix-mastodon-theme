@@ -80,3 +80,4 @@ LABEL org.opencontainers.image.source="https://github.com/svlt/xusix-mastodon-th
 
 COPY --from=build /app/www/public/ /app/www/public/
 COPY --from=build /app/www/config/themes.yml /app/www/config/themes.yml
+COPY app/javascript/images/ /app/www/app/javascript/images/

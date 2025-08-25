@@ -1,9 +1,8 @@
+@use 'sass:color';
 @use 'variables' as *;
 @use '../mastodon/variables' as *;
 
-// TODO: update hsl to use oklch
-$active-hue: 6;
-$active-sat: 65%;
+// https://codepen.io/alanaktion/pen/ExpxLVa
 
 :root {
   --xusix-red: $xusix-800;
@@ -15,7 +14,7 @@ html {
 }
 
 // Change the appearance of buttons
-button, .button, .block-button {
+.button, .block-button, .btn {
   &, .simple_form & {
     background: linear-gradient(#3F3F3F, #0e0e0e);
     color: $white;
@@ -58,43 +57,58 @@ button, .button, .block-button {
 
 #mastodon,
 .public-layout {
-  background: linear-gradient(hsl($active-hue 97% 25%), hsl($active-hue 30% 5%));
+  background: linear-gradient($xusix-800, color.change($xusix-800, $lightness: 0.15, $chroma: 0.04));
   background-attachment: fixed;
 }
 
-.drawer__header {
-  .drawer__tab {
-    border: 1px solid #242424;
-    border-bottom-color: #404040;
-    background: linear-gradient(#838383, #444 50%, $xusix-base-color 50%, #333);
-    color: $white;
-    &:hover {
-      border-color: hsl($active-hue $active-sat 14%);
-      border-bottom-color: hsl($active-hue $active-sat 25%);
-      background: linear-gradient(
-        hsl($active-hue $active-sat 51%),
-        hsl($active-hue $active-sat 27%) 50%,
-        hsl($active-hue $active-sat 19%) 50%,
-        hsl($active-hue $active-sat 20%)
-      );
-      box-shadow: 0 -1px 0 hsl($active-hue $active-sat 15%) inset,
-        0 1px 0 hsl($active-hue $active-sat 45%) inset;
-    }
-    &:active {
-      border-color: hsl($active-hue $active-sat 4%);
-      border-bottom-color: hsl($active-hue $active-sat 15%);
-      background: linear-gradient(
-        hsl($active-hue $active-sat 41%),
-        hsl($active-hue $active-sat 17%) 50%,
-        hsl($active-hue $active-sat 9%) 50%,
-        hsl($active-hue $active-sat 10%)
-      );
-      box-shadow: 0 -1px 0 hsl($active-hue $active-sat 5%) inset,
-        0 1px 0 hsl($active-hue $active-sat 35%) inset;
-    }
+.drawer__tab, .column-header__button {
+  border: 1px solid #242424;
+  border-bottom-color: #404040;
+  background: linear-gradient(#838383, #444 50%, $xusix-base-color 50%, #333);
+  color: $white;
+  &:hover {
+    border-color: color.change($xusix-800, $lightness: 0.14);
+    border-bottom-color: color.change($xusix-800, $lightness: 0.25);
+    background: linear-gradient(
+      color.change($xusix-800, $lightness: 0.51),
+      color.change($xusix-800, $lightness: 0.27) 50%,
+      color.change($xusix-800, $lightness: 0.19) 50%,
+      color.change($xusix-800, $lightness: 0.2)
+    );
+    box-shadow: 0 -1px 0 color.change($xusix-800, $lightness: 0.15) inset,
+      0 1px 0 color.change($xusix-800, $lightness: 0.45) inset;
+  }
+  &:active {
+    border-color: color.change($xusix-800, $lightness: 0.04);
+    border-bottom-color: color.change($xusix-800, $lightness: 0.15);
+    background: linear-gradient(
+      color.change($xusix-800, $lightness: 0.41),
+      color.change($xusix-800, $lightness: 0.17) 50%,
+      color.change($xusix-800, $lightness: 0.09) 50%,
+      color.change($xusix-800, $lightness: 0.1)
+    );
+    box-shadow: 0 -1px 0 color.change($xusix-800, $lightness: 0.05) inset,
+      0 1px 0 color.change($xusix-800, $lightness: 0.35) inset;
   }
 }
 
 .tabs-bar__wrapper {
   background: none;
+}
+
+.column-header {
+  background: linear-gradient(#636363, #202020 50%, #000 50%, #000);
+  color: $white;
+  text-shadow: 0 1px 0 #0007;
+  border-top: 1px solid #858585;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 -1px 0 #636363 inset, 0 1px 0 #858585 inset;
+}
+
+.column-header__collapsible {
+  background-color: var(--dropdown-background-color);
+}
+
+.column {
+  background-color: var(--background-color);
 }
