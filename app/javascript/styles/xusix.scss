@@ -10,7 +10,7 @@
 [data-color-scheme='dark'],
 html:not([data-color-scheme]) {
   --color-text-primary: #bababa;
-  --color-text-secondary: #{$xusix-600};
+  --color-text-secondary: #4b4b4b;
   --color-text-tertiary: #{$xusix-500};
   --color-text-inverted: #{$xusix-100};
   --color-text-brand: #{$xusix-highlight-color};
@@ -22,10 +22,10 @@ html:not([data-color-scheme]) {
   --color-text-on-brand-base: #fff;
   --color-text-on-error-base: #fff;
 
-  --color-bg-primary: #222;
+  --color-bg-primary: #000;
   --color-bg-secondary: #{$xusix-900};
   --color-bg-tertiary: #{$xusix-800};
-  --color-bg-inverted: #e6e6e6;
+  --color-bg-inverted: #{$xusix-secondary-color};
   --color-bg-brand-base: #{$xusix-highlight-color};
   --color-bg-brand-base-hover: #{$xusix-600};
   --color-bg-brand-soft: #{$xusix-700};
@@ -34,7 +34,7 @@ html:not([data-color-scheme]) {
   --color-bg-error-base-hover: #{$xusix-600};
   --color-bg-success-base: #{$cubik-green};
 
-  --color-border-primary: #{$xusix-800};
+  --color-border-primary: #000;
   --color-border-brand: #{$xusix-highlight-color};
   --color-border-brand-soft: #{$xusix-700};
   --color-border-error: #{$cubik-red};
