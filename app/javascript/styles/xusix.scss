@@ -9,10 +9,10 @@
 // Xusix theme - override upstream design tokens for the dark scheme
 [data-color-scheme='dark'],
 html:not([data-color-scheme]) {
-  --color-text-primary: #bababa;
-  --color-text-secondary: #4b4b4b;
+  --color-text-primary: #{$xusix-primary-color};
+  --color-text-secondary: #{$xusix-secondary-color};
   --color-text-tertiary: #{$xusix-500};
-  --color-text-inverted: #{$xusix-100};
+  --color-text-inverted: #{$xusix-secondary-color};
   --color-text-brand: #{$xusix-highlight-color};
   --color-text-brand-soft: #{$xusix-300};
   --color-text-brand-on-inverted: #{$xusix-highlight-color};
@@ -25,7 +25,7 @@ html:not([data-color-scheme]) {
   --color-bg-primary: #000;
   --color-bg-secondary: #{$xusix-900};
   --color-bg-tertiary: #{$xusix-800};
-  --color-bg-inverted: #{$xusix-secondary-color};
+  --color-bg-inverted: #{$xusix-base-color};
   --color-bg-brand-base: #{$xusix-highlight-color};
   --color-bg-brand-base-hover: #{$xusix-600};
   --color-bg-brand-soft: #{$xusix-700};

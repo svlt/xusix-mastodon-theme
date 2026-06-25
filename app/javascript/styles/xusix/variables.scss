@@ -20,11 +20,11 @@ $cubik-red: oklch(0.5818 0.2212 27.67);
 $cubik-yellow: oklch(0.8301 0.1483 75.04);
 $cubik-green: oklch(0.6515 0.1731 145.74);
 $cubik-purple: oklch(0.4718 0.1816 319.7);
-$cubik-light-grey: #fafafa;
-$cubik-grey: #555;
+$cubik-light-grey: oklch(0.9851 0 0);
+$cubik-grey: oklch(0.4495 0 0);
 
 // Xusix Mastodon UI colors
-$xusix-base-color: #222; // #303030
-$xusix-primary-color: #bababa;
-$xusix-secondary-color: #e6e6e6;
+$xusix-base-color: oklch(0.252 0 0);
+$xusix-primary-color: oklch(0.7889 0 0);
+$xusix-secondary-color: oklch(0.9249 0 0);
 $xusix-highlight-color: oklch(0.5711 0.22679 30.96);
