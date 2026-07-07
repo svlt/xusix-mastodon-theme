@@ -1,0 +1,35 @@
+// This file contains more significant changes to the overall design of Mastodon, to match my preferences.
+
+.status-card {
+  // Un-expand the status cards
+  &.expanded {
+    flex-direction: row;
+    .status-card__image {
+      width: auto;
+      max-width: 35%;
+      border-start-start-radius: 8px;
+      border-end-start-radius: 8px;
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+    }
+    .status-card__content {
+      padding: 10px 15px;
+    }
+  }
+
+  // Fade out images
+  .status-card__image {
+    opacity: 0.8;
+  }
+  &:hover .status-card__image {
+    opacity: 1;
+  }
+
+  // Don't make the whole thing red on hover
+  .status &:hover {
+    .status-card__host,
+    .status-card__description {
+      color: var(--color-text-secondary);
+    }
+  }
+}

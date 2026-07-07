@@ -5,6 +5,7 @@
 
 @use 'application';
 @use 'xusix/diff';
+@use 'xusix/redesign';
 
 // Xusix theme - override upstream design tokens for the dark scheme
 [data-color-scheme='dark'],
